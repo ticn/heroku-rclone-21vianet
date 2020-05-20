@@ -46,20 +46,20 @@ heroku run bash --a myapp
 ```
 
 ### Rclone
-Learn more from [Rclone Docs](https://rclone.org/commands/)
+Learn more from [Rclone Docs](https://rclone.org/commands/) and [Gclone Docs](https://github.com/donwa/gclone)
 
 **Upload file to Google Drive**
 ```
-rclone -v copy local_dir gdrive_config:remote_drive_dir
-```
+# The usual way
+rclone -P copy local_dir Google:remote_dirpath
 
-**View file on Google drive**
+# The way that like using gclone
+rclone -P copy local_dir Google:{Destination_ID}
 ```
-rclone lsd gdrive_config:remote_drive_dir
-```
+`-P` mean print progress in real time
 
 ### Aria2
-Learn more from [Aria2 Docs](http://aria2.github.io/manual/en/html/aria2c.html)
+Learn more from [Aria2c Docs](http://aria2.github.io/manual/en/html/aria2c.html)
 
 **Download a file**
 ```
@@ -72,10 +72,10 @@ Learn more from [UNRAR Docs](https://pypi.org/project/unrar/)
 
 **Extract `.rar` or `.zip` Compressed file**
 ```
-# to current directory
+# To current directory
 unrar e file.rar/zip
 
-# with full path
+# With full path
 unrar x file.rar/zip
 ```
 
