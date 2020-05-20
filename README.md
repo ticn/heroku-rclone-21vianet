@@ -16,14 +16,14 @@ heroku git:clone -a myapp
 heroku buildpacks:set https://github.com/xinxin8816/heroku-rclone-21vianet.git -a myapp
 ```
 
-2. Setup Rclone by following [Rclone Docs](https://rclone.org/docs/).<br> 
-Optional: using service account setup with [Gclone Rradme](https://github.com/donwa/gclone) to break Google Drive 750GB limit, Chinese users setup with 21vianet patch to connect OneDrive by 21vianet.<br> 
+2. Setup Rclone by following [Rclone Docs](https://rclone.org/docs/), Chinese users can setup with 21vianet patch to connect OneDrive by 21vianet.<br> 
 You can find your config from there:
 
 ```
 Windows: %userprofile%\.config\rclone\rclone.conf
 Linux: $HOME/.config/rclone/rclone.conf
 ```
+Optional: Using service account setup with [Gclone](https://github.com/donwa/gclone) to break Google Drive 750GB limit, or easier connect to folder or Team Drive by destination ID. Create a new folder, such as `/accounts/`, upload your json in it. Open rclone config and edit `service_account_file_path = /app/accounts/` as the json paths.
 
 Rclone with 21vianet patch and Gclone mod provided by xhuang.
 
